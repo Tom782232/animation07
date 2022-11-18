@@ -4,9 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>animation</title>
+    <title>Animation Gallery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body> 
+    <div class="container" >
+            <div class="heading">Choose a number from an animation you like <br>
+            (click to play and if you want close click again on the video )</div>
+
+            <div class="video-container">
+
+            <div class="video">
+                <p>NO 01</p>
+                <video src="video/no1.mp4" muted></video>
+            </div>
+            <div class="video">
+                <p>NO 02</p>
+                <video src="video/no2.mp4" muted></video>
+            </div>
+            <div class="video">
+                <p>NO 03</p>
+                <video src="video/no3-2.mp4" muted></video>
+            </div>
+            <div class="video">
+                <p>NO 04</p>
+                <video src="video/no4-2.mp4" muted></video>
+            </div>
+            <div class="video">
+                <p>NO 05</p>
+                <video src="video/no5-1.mp4" muted></video>
+            </div>
+            <div class="video">
+                <p>NO 06</p>
+                <video src="video/no6.mp4" muted></video>
+            </div>
+            <div class="video">
+                <p>NO 07</p>
+                <video src="video/no7.mp4" muted></video>
+            </div>
+            <div class="video">
+                <p>NO 08</p>
+                <video src="video/no8.mp4" muted></video>
+            </div>
+            <div class="video">
+                <p>NO 09</p>
+                <video src="video/no9.mp4" muted></video>
+            </div>
+            <div class="video">
+                <p>NO 10</p>
+                <video src="video/no10.mp4" muted></video>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var video = document.querySelectorAll('video')
+        video.forEach(play => play.addEventListener('click', () => {
+            play.classList.toggle('active');
+
+            if(play.paused){
+                play.play();
+                
+            }else{
+                    play.pause();
+                    play.currentTime = 0
+                }
+            
+            
+            
+        }));
+    </script>
     
 </body>
 </html>
